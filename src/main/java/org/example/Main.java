@@ -8,18 +8,18 @@ import java.util.OptionalDouble;
 public class Main {
     public static void main(String[] args) {
        StudentManagementSystem sms = StudentManagementSystem.builder().build();
-//        List<Student> students = sms.addStudent();
+        List<Student> students = sms.addStudent();
 //        students.stream().sorted((s1,s2)->s1.getStudentName().compareTo(s2.getStudentName())).forEach(System.out::println);
 
-//        int total = students.stream().mapToInt(Student::getMarks).sum();
-//        double average = students.stream().mapToInt(Student::getMarks).average().getAsDouble();
+        int total = students.stream().mapToInt(Student::getMarks).sum();
+        double average = students.stream().mapToInt(Student::getMarks).average().getAsDouble();
 ////      students.forEach(s-> System.out.print(s.getMarks()+" "));
-//        System.out.println("Total Marks is "+ total);
-//        System.out.println("Average Marks is "+average);
+        System.out.println("Total Marks is "+ total);
+        System.out.println("Average Marks is "+average);
 //            sms.sortName().stream().forEach(System.out::println);
 //        sms.searchName();
 //        sms.reverseName().stream().forEach(System.out::println);
         sms.shuffleName().stream().forEach(System.out::println);
-        
+
     }
 }
